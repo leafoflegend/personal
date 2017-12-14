@@ -1,5 +1,6 @@
 {
   "name": "eleni.codes",
+  "repository": "github.com/DatGreekChick/personal",
   "version": "0.0.1",
   "description": "My personal website featuring my portfolio and my writing pieces.",
   "main": "index.js",
@@ -30,7 +31,9 @@
     "branding"
   ],
   "author": "Eleni Arvanitis",
-  "collaborators": ["Ashi Krishnan: initial firebase setup"],
+  "collaborators": [
+    "Ashi Krishnan: initial firebase setup"
+  ],
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -39,19 +42,20 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "chalk": "^2.3.0",
-    "firebase-tools": "^3.14.0",
+    "firebase-tools": "^3.16.0",
     "react-hot-loader": "^3.1.2",
     "strip-ansi": "^4.0.0",
     "through2": "^2.0.3",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "chokidar": "^1.7.0",
-    "firebase": "^4.7.0",
+    "firebase": "^4.8.0",
     "minimist": "^1.2.0",
-    "react": "^16.1.0",
-    "react-dom": "^16.1.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "t2-cli": "^0.1.17"
   }
 }
