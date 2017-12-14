@@ -1,7 +1,7 @@
 # Get started:
 
 ```
-git clone git@github.com:queerviolet/spark.git
+git clone git@github.com:datgreekchick/spark.git
 cd spark
 npm install
 npm start
@@ -10,7 +10,7 @@ npm start
 # Frontend
 
 The frontend starts in [`main.js`](./main.js). The root of the react app
-is in [`App.jsx`](./App.jsx).
+is in [`App.jsx`](client/App.jsx).
 
 # a word about ~
 

@@ -11,7 +11,7 @@ const debug = require('debug')('dev')
     , strip = require('strip-ansi')
     , colors = [chalk.cyan, chalk.green, chalk.magenta, chalk.blue]
 let nextColorIdx = 0
-    
+
 let resolveFirebaseUrl, hasStartedListening = false
 const firebaseUrl = new Promise(r => resolveFirebaseUrl = r).then(strip)
 
@@ -37,9 +37,9 @@ const firebaseServe = spawn('🔥  firebase serve',
 firebaseServe.stdout
   // We're looking for the line where firebase serve tells us
   // what URL it's accessible at (usually localhost:5000, but it
-  // may have to pick another port). 
+  // may have to pick another port).
   .pipe(thru(function (line, enc, cb) {
-    // To avoid confusion, we don't pass through stdout until 
+    // To avoid confusion, we don't pass through stdout until
     // after the "listening" line has passed.
     cb(null, hasStartedListening ? line : debug('%s', line))
 
@@ -84,14 +84,14 @@ function spawn(label, ...args) {
       }
       process.exit(status)
     })
-  
+
   child.stdout = child.stdout.pipe(labelWith(labeler))
   child.stderr = child.stderr.pipe(labelWith(labeler))
   child.toConsole = () => {
     child.stdout.pipe(process.stdout)
     child.stderr.pipe(process.stderr)
-  }  
-  
+  }
+
   return child
 }
 

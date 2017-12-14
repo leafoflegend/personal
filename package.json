@@ -16,7 +16,8 @@
     "deploy": "npm run build-prod && npx firebase deploy"
   },
   "keywords": [],
-  "author": "Ashi Krishnan <hi@ashi.io>",
+  "author": "Eleni Arvanitis",
+  "collaborators": ["Ashi Krishnan - Initial firebase setup"],
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -24,6 +25,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "chalk": "^2.3.0",
     "firebase-tools": "^3.14.0",
     "react-hot-loader": "^3.1.2",
     "strip-ansi": "^4.0.0",
