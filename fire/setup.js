@@ -4,10 +4,11 @@ export default firebase =>
 // See https://firebase.google.com/docs/web/setup for more details.
 
 firebase.initializeApp({
-  apiKey: "AIzaSyCSDIJcPHNNOU9aob-hTKJr1Gs2aBfXF6k",
-  authDomain: "elenicodes.firebaseapp.com",
-  databaseURL: "https://elenicodes.firebaseio.com",
-  projectId: "elenicodes",
-  storageBucket: "elenicodes.appspot.com",
-  messagingSenderId: "928734970131"
+  "apiKey": "AIzaSyCSDIJcPHNNOU9aob-hTKJr1Gs2aBfXF6k",
+  "databaseURL": "https://elenicodes.firebaseio.com",
+  "storageBucket": "elenicodes.appspot.com",
+  "authDomain": "elenicodes.firebaseapp.com",
+  "messagingSenderId": "928734970131",
+  "projectId": "elenicodes"
 });
+

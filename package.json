@@ -1,7 +1,7 @@
 {
-  "name": "spark",
-  "version": "0.0.0",
-  "description": "",
+  "name": "eleni.codes",
+  "version": "0.0.1",
+  "description": "My personal website featuring my portfolio and my writing pieces.",
   "main": "index.js",
   "scripts": {
     "postinstall": "cd functions && npm install",
@@ -15,9 +15,22 @@
     "build-prod": "npm run build-lib-prod && npm run build",
     "deploy": "npm run build-prod && npx firebase deploy"
   },
-  "keywords": [],
+  "keywords": [
+    "personal-website",
+    "react",
+    "redux",
+    "react-redux",
+    "firebase",
+    "sass",
+    "portfolio",
+    "work",
+    "projects",
+    "contact",
+    "personal-branding",
+    "branding"
+  ],
   "author": "Eleni Arvanitis",
-  "collaborators": ["Ashi Krishnan - Initial firebase setup"],
+  "collaborators": ["Ashi Krishnan: initial firebase setup"],
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
