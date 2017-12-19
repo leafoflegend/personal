@@ -1,0 +1,11 @@
+//@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Poppins:300');
+
+//$primary-font: 'Nunito Sans', sans-serif;
+//$secondary-font: 'Poppins', sans-serif;
+//$primary-color: ghostwhite;
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: ghostwhite;
+  background-color: rgba(0, 0, 0, 0.6);
+}
