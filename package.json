@@ -52,10 +52,13 @@
   },
   "dependencies": {
     "chokidar": "^1.7.0",
+    "css-loader": "^0.28.7",
     "firebase": "^4.8.0",
     "minimist": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^0.19.1",
     "t2-cli": "^0.1.17"
   }
 }
