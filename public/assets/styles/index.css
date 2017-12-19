@@ -1,11 +1,36 @@
-//@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Poppins:300');
-
-//$primary-font: 'Nunito Sans', sans-serif;
-//$secondary-font: 'Poppins', sans-serif;
-//$primary-color: ghostwhite;
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Poppins:300');
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
-  color: ghostwhite;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-bar {
+    top: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: medium;
+    color: ghostwhite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0; padding: 0.5rem 0;
+    height: 25px; width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: ghostwhite;
+}
+
+a:hover {
+    color: #e0bf9f;
+}
+
+a.active {
+    /*have an underline appear*/
+    color: #e0bf9f;
+}
+
+.logo {
+    min-width: 4%; min-height: 4%;
+    max-width: 7%; max-height: 7%;
 }
