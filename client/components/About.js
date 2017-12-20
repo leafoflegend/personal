@@ -12,7 +12,7 @@ const About = () => {
     <p className='about-text'>{aboutText1}</p>
     <p className='about-text'>{aboutText2}</p>
     <img className='about-photo'
-         src='/public/assets/img/me.jpg'
+         src='/assets/img/me.png'
          alt='my photo'
     />
   </div>
