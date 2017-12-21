@@ -11,6 +11,3 @@ functions/lib.js
 
 # firebase config
 fire/setup.js
-
-# Logo creation file
-public/assets/initials.ai

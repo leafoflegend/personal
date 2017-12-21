@@ -26,7 +26,7 @@ a {
     color: ghostwhite;
 }
 
-a:before {
+a.underline:before {
     content: "";
     position: absolute;
     width: 100%; height: 2px;
@@ -39,14 +39,14 @@ a:before {
     -webkit-transition: all 0.3s ease-in-out 0s;
 }
 
-a:hover:before {
+a.underline:hover:before {
     color: #e0bf9f;
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-a.active {
+a.underline.active {
     color: #e0bf9f;
 }
 

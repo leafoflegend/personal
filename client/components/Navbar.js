@@ -9,10 +9,10 @@ const Navbar = () => {
     <NavLink to='/'>
       <img className="logo" src={logo} alt="ea-logo-cream"/>
     </NavLink>
-    <NavLink to='/about'>About</NavLink>
-    <NavLink to='/work'>Work</NavLink>
-    <NavLink to='/articles'>Articles</NavLink>
-    <NavLink to='/contact'>Contact</NavLink>
+    <NavLink to='/about' className='underline'>About</NavLink>
+    <NavLink to='/work' className='underline'>Work</NavLink>
+    <NavLink to='/articles' className='underline'>Articles</NavLink>
+    <NavLink to='/contact' className='underline'>Contact</NavLink>
   </nav>
 }
 
