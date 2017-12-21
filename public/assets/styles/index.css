@@ -52,5 +52,6 @@ a.underline.active {
 
 .logo {
     max-width: 35%; max-height: 35%;
-    align-items: left;
+    display: inline;
+    float: left;
 }
