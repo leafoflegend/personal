@@ -15,15 +15,17 @@ export default class App extends Component {
     return <Router>
       <div>
         <Navbar/>
+        {/*<Footer />*/}
         <Switch>
+          {/*<Route exact path='/' component={Home}/>*/}
           <Route exact path="/about" component={About}/>
           {/*<Route exact path='/work' component={Work}/>*/}
           {/*<Route exact path='articles' component={Articles}/>*/}
           {/*<Route exact path='/articles/:articleId'*/}
-                 {/*component={({match: {params: {screenplayId}}}) =>*/}
-                   {/*<Editor title={screenplayId}*/}
-                           {/*fireRef={db.ref('screenplays')*/}
-                             {/*.child(screenplayId)}/>}*/}
+                 {/*component={({match: {params: {articleId}}}) =>*/}
+                   {/*<Article title={articleId}*/}
+                           {/*fireRef={db.ref('articles')*/}
+                             {/*.child(articleId)}/>}*/}
           {/*/>*/}
           {/*<Route exact path="/contact" component={Contact}/>*/}
         </Switch>
