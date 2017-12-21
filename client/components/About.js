@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 import '~/public/assets/styles/about.css'
 import '~/public/assets/styles/button.css'
 
@@ -12,6 +14,8 @@ export default () => {
     <p className='about-header'>{aboutHeader}</p>
     <p className='about-text'>{aboutText1}</p>
     <p className='about-text'>{aboutText2}</p>
-    <button>See my work</button>
+    <NavLink to='/work'>
+      <button>See my work</button>
+    </NavLink>
   </div>
 }
