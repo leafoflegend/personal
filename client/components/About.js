@@ -1,17 +1,17 @@
-const aboutHeader = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-      aboutText1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent condimentum quam sit amet dictum suscipit. Ut sed vestibulum odio. Aenean lorem justo, lacinia et ipsum eu, interdum fringilla eros. Curabitur in sapien rutrum, tempor erat vitae, viverra lectus. Pellentesque ultricies imperdiet augue, sit amet faucibus augue faucibus eget. Nulla facilisi. Maecenas suscipit justo eget magna semper, ut dignissim mi sodales. In et cursus quam.',
-      aboutText2 = 'Maecenas ut consectetur augue. Phasellus non scelerisque sapien, in pharetra eros. Donec a risus vitae tellus finibus volutpat a non tellus. Phasellus semper augue arcu, id volutpat purus tempor venenatis. Nullam ultrices, lacus eu commodo volutpat, odio tortor gravida ante, sed pulvinar odio massa id lectus. Suspendisse ac ligula mauris. Suspendisse felis nulla, lobortis luctus pretium scelerisque, euismod id velit.',
-      photo = ''
-
 import React from 'react';
 import '~/public/assets/styles/about.css'
+import '~/public/assets/styles/button.css'
 
-const About = () => {
+const aboutHeader = 'Creating useful and engaging software'
+    , aboutText1 = `I’m a full stack software engineer advanced in JavaScript, Node.js, Express.js, SQL, PostgreSQL, Sequelize, React.js, Redux, React-Redux, and CSS. I also have some experience with SCSS, Python and robotics hardware from independent projects. I thrive in environments that constantly push me to learn and want to learn more programming languages, including C++, Java, Swift, and Go.`
+    , aboutText2 = `When I’m not on the job, I love catching a game of soccer, strumming my bass guitar, following the latest fashion trends, or taking photos while traveling.`
+    // , photo = ''
+
+export default () => {
   return <div className='about'>
-    <h2 className='about-header'>{aboutHeader}</h2>
+    <p className='about-header'>{aboutHeader}</p>
     <p className='about-text'>{aboutText1}</p>
     <p className='about-text'>{aboutText2}</p>
+    <button>See my work</button>
   </div>
 }
-
-export default About
