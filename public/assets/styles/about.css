@@ -1,17 +1,17 @@
 .about {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    padding: 2%; margin: 0;
+    padding: 2%; margin-right: 55%;
 }
 
 .about-header {
-    font-family: 'Nunito Sans', sans-serif;
     font-size: 35pt;
-    font-weight: bolder;
+    font-weight: 800;
     color: ghostwhite;
 }
 
 .about-text {
-    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     color: ghostwhite;
 }

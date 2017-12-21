@@ -11,10 +11,6 @@ const About = () => {
     <h2 className='about-header'>{aboutHeader}</h2>
     <p className='about-text'>{aboutText1}</p>
     <p className='about-text'>{aboutText2}</p>
-    <img className='about-photo'
-         src='/assets/img/me.png'
-         alt='my photo'
-    />
   </div>
 }
 

@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Poppins:300');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,800');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
 
 body {
   background-color: rgba(0, 0, 0, 0.9);
@@ -6,31 +10,42 @@ body {
 
 .nav-bar {
     top: 0;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: medium;
+    font-size: 23px;
+    font-weight: 800;
     color: ghostwhite;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 0; padding: 0.5rem 0;
-    height: 25px; width: 100%;
+    margin: 0; padding: 1rem 0;
+    width: 100%;
 }
 
 a {
     text-decoration: none;
+    position: relative;
     color: ghostwhite;
 }
 
-a:hover {
+a:before {
+    content: "";
+    position: absolute;
+    width: 100%; height: 2px;
+    bottom: 0; left: 0;
+    background-color: #e0bf9f;
+    visibility: hidden;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
     color: #e0bf9f;
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 a.active {
-    /*have an underline appear*/
     color: #e0bf9f;
-}
-
-.logo {
-    min-width: 4%; min-height: 4%;
-    max-width: 7%; max-height: 7%;
 }
