@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import '~/public/assets/styles/index.css'
 
-const logo = '/assets/img/ea-logo-gold.png';
+const logo = '/assets/img/ea-logo-cream.png';
 
 export default class Navbar extends Component {
   render() {

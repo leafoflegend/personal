@@ -49,3 +49,7 @@ a:hover:before {
 a.active {
     color: #e0bf9f;
 }
+
+.logo {
+    max-width: 35%; max-height: 35%;
+}
