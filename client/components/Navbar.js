@@ -4,7 +4,7 @@ import '~/public/assets/styles/index.css'
 
 const logo = '/assets/img/ea-logo-cream.png';
 
-const Navbar = () => {
+export default () => {
   return <nav className="nav-bar">
     <NavLink to='/'>
       <img className="logo" src={logo} alt="ea-logo-cream"/>
@@ -15,5 +15,3 @@ const Navbar = () => {
     <NavLink to='/contact' className='underline'>Contact</NavLink>
   </nav>
 }
-
-export default Navbar
