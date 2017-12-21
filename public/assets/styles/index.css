@@ -15,7 +15,7 @@ body {
     color: ghostwhite;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: right;
     margin: 0; padding: 1rem 0;
     width: 100%;
 }
@@ -52,4 +52,5 @@ a.active {
 
 .logo {
     max-width: 35%; max-height: 35%;
+    align-items: left;
 }
