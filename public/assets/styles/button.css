@@ -8,21 +8,21 @@ button {
     font-size: large;
     position: relative;
     overflow: hidden;
-    transition: .3s;
+    transition: .4s;
     background-color: transparent;
     color: ghostwhite;
 }
 
 button:after {
     position: absolute;
-    transition: .3s;
+    transition: .4s;
     content: '';
     width: 100%;
     bottom: 0;
     background: #e0bf9f;
     height: 120%;
     left: -110%;
-    transform: skewX(15deg);
+    transform: skewX(20deg);
     z-index: -1;
 }
 
