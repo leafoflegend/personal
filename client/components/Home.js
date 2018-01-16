@@ -1,9 +1,8 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom'
 import '~/public/assets/styles/home.css'
-import '~/public/assets/styles/button.css'
 
+// TODO: Make this a text carousel
 const blurb = ''
     , me = [
       'a software engineer',
