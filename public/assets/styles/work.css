@@ -1,0 +1,41 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 40pt;
+    font-weight: 800;
+    line-height: 0.5;
+    text-align: center;
+}
+
+.projects:hover {
+    /*add photo for background to pop up!*/
+}
+
+.line {
+    display: inline-block;
+    position: relative;
+}
+
+.line:before,
+.line:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid ghostwhite;
+    border-top: 1px solid ghostwhite;
+    top: 0;
+    width: 600px;
+}
+
+.line:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.line:after {
+    left: 100%;
+    margin-left: 15px;
+}
