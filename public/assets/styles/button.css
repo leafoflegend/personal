@@ -35,3 +35,7 @@ button:hover:after {
     left: -10%;
     width: 150%;
 }
+
+.button-link:hover {
+    color: black;
+}
