@@ -1,12 +1,13 @@
+.main-project-div {
+    padding-top: 5%;
+}
+
 .projects {
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 10px 0;
-    font-size: 40pt;
+    padding: 18px 0;
+    font-size: 28pt;
     font-weight: 800;
-    line-height: 0.5;
     text-align: center;
 }
 
@@ -15,27 +16,34 @@
 }
 
 .line {
+    line-height: 0.5;
     display: inline-block;
     position: relative;
+}
+
+.line:hover {
+    color: #e0bf9f;
 }
 
 .line:before,
 .line:after {
     content: "";
     position: absolute;
-    height: 5px;
+    height: 9px;
     border-bottom: 1px solid ghostwhite;
     border-top: 1px solid ghostwhite;
-    top: 0;
-    width: 600px;
+    top: 1px;
+    width: 50%;
 }
 
 .line:before {
     right: 100%;
     margin-right: 15px;
+    padding-top: 5px;
 }
 
 .line:after {
     left: 100%;
     margin-left: 15px;
+    padding-top: 5px;
 }

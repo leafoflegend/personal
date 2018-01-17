@@ -14,7 +14,7 @@ const projectNames = [
 ]
 
 export default () => {
-  return <div>
+  return <div className='main-project-div'>
     {
       projectNames.map(project => {
         return <div className='projects'>
