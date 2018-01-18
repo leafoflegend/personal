@@ -8,6 +8,7 @@ import Navbar from '~/client/components/Navbar'
 import About from '~/client/components/About'
 import Home from '~/client/components/Home'
 import Work from '~/client/components/Work'
+import Articles from '~/client/components/Articles'
 
 // import firebase from 'firebase'
 
@@ -20,12 +21,11 @@ export default class App extends Component {
     return <Router>
       <div>
         <Navbar/>
-        {/*<Footer />*/}
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path="/about" component={About}/>
           <Route exact path='/work' component={Work}/>
-          {/*<Route exact path='articles' component={Articles}/>*/}
+          <Route exact path='articles' component={Articles}/>
           {/*<Route exact path='/articles/:articleId'*/}
                  {/*component={({match: {params: {articleId}}}) =>*/}
                    {/*<Article title={articleId}*/}
@@ -34,6 +34,7 @@ export default class App extends Component {
           {/*/>*/}
           {/*<Route exact path="/contact" component={Contact}/>*/}
         </Switch>
+        {/*<Footer />*/}
       </div>
     </Router>
   }
