@@ -1,8 +1,6 @@
 import React from 'react'
 import '~/public/assets/styles/work.css'
 
-// TODO: Fix text color on button hover (link within button)
-
 const projectNames = [
   'coquill',
   'by land or sea',
@@ -17,19 +15,17 @@ export default () => {
   return <div className='main-project-div'>
     {
       projectNames.map(project => {
-        return <div className='projects'>
+        return <div key={project} className='projects'>
           <span className='line'>
             {project.toUpperCase()}
           </span>
         </div>
       })
     }
-    <button>
-      <a className='button-link'
-         href="/assets/Eleni-Arvanitis-Resume.pdf"
-         target="_blank">
-        Download Resume
-      </a>
-    </button>
+    <a className='button-link'
+       href="/assets/Eleni-Arvanitis-Resume.pdf"
+       target="_blank">
+      <button>Download Resume</button>
+    </a>
   </div>
 }
