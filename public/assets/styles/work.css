@@ -47,3 +47,9 @@
     margin-left: 15px;
     padding-top: 5px;
 }
+
+button.resume-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+}

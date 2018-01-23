@@ -25,7 +25,7 @@ export default () => {
     <a className='button-link'
        href="/assets/Eleni-Arvanitis-Resume.pdf"
        target="_blank">
-      <button>Download Resume</button>
+      <button className='resume-button'>Download Resume</button>
     </a>
   </div>
 }
