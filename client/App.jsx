@@ -25,7 +25,7 @@ export default class App extends Component {
           <Route exact path='/' component={Home}/>
           <Route exact path="/about" component={About}/>
           <Route exact path='/work' component={Work}/>
-          <Route exact path='articles' component={Articles}/>
+          <Route exact path='/articles' component={Articles}/>
           {/*<Route exact path='/articles/:articleId'*/}
                  {/*component={({match: {params: {articleId}}}) =>*/}
                    {/*<Article title={articleId}*/}
