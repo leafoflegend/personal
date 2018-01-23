@@ -3,6 +3,7 @@ import '~/public/assets/styles/articles.css'
 
 // TODO: Store articles in firebase db to access links (button), titles (top, right from photo), and photos (left), date created, description
 // TODO: Clean up article descriptions
+// TODO: Maybe separate articles by topic?
 
 const links = [
   [
@@ -29,7 +30,7 @@ export default () => {
           </h3>
           <p className='date-posted'>{article[1]}</p>
           <p className='description'>{article[2]}</p><br/>
-          <a href={links[3]} target='_blank'>
+          <a href={article[3]} target='_blank'>
             <button>Read More</button>
           </a>
         </div>
