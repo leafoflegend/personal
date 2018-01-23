@@ -1,3 +1,7 @@
+hr {
+    border-color: #e0bf9f;
+}
+
 .all-articles {
     padding-top: 5%;
     display: flex;
@@ -6,4 +10,17 @@
 
 .article {
     padding: 10px 20%;
+}
+
+.article-title {
+    color: #e0bf9f;
+    font-size: 18pt;
+}
+
+.date-posted {
+    font-style: italic;
+}
+
+.description {
+    font-size: large;
 }

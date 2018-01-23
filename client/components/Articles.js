@@ -33,6 +33,7 @@ export default () => {
           <a href={article[3]} target='_blank'>
             <button>Read More</button>
           </a>
+          <hr/>
         </div>
       })
     }
