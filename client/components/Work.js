@@ -3,7 +3,7 @@ import '~/public/assets/styles/work.css'
 
 // TODO: Have resume button come up more on the page
 
-const projectNames = [
+const projects = [
   'coquill',
   'by land or sea',
   "'what is my purpose?'",
@@ -21,7 +21,7 @@ export default () => {
       <button className='resume-button'>View Resume</button>
     </a>
     {
-      projectNames.map(project => {
+      projects.map(project => {
         return <div key={project} className='projects'>
           <span className='line'>
             {project.toUpperCase()}
