@@ -10,13 +10,6 @@ hr {
     padding: 10px 20%;
 }
 
-.article-img {
-    position: relative;
-    float: right;
-    padding: 25px 0 25px 25px;
-    width: 45%; height: 45%;
-}
-
 .article-title {
     color: #e0bf9f;
     font-size: 18pt;
