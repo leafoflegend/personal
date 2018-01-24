@@ -1,6 +1,8 @@
 import React from 'react'
 import '~/public/assets/styles/work.css'
 
+// TODO: Have resume button come up more on the page
+
 const projectNames = [
   'coquill',
   'by land or sea',
@@ -13,6 +15,11 @@ const projectNames = [
 
 export default () => {
   return <div className='main-project-div'>
+    <a className='button-link'
+       href="/assets/Eleni-Arvanitis-Resume.pdf"
+       target="_blank">
+      <button className='resume-button'>View Resume</button>
+    </a>
     {
       projectNames.map(project => {
         return <div key={project} className='projects'>
@@ -22,10 +29,5 @@ export default () => {
         </div>
       })
     }
-    <a className='button-link'
-       href="/assets/Eleni-Arvanitis-Resume.pdf"
-       target="_blank">
-      <button className='resume-button'>Download Resume</button>
-    </a>
   </div>
 }
