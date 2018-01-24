@@ -1,0 +1,31 @@
+.contact {
+    padding: 0 5%;
+}
+
+h2 {
+    font-size: 60pt;
+}
+
+.form-input:focus {
+    outline: none;
+    padding: 10px 0;
+}
+
+input {
+    transition: all 0.25s;
+    -webkit-backface-visibility: hidden;
+    font-size: 22px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input, textarea {
+    font-size: 22px;
+    width: 40%;
+    padding: 5px 10px;
+    background: transparent;
+    border: transparent;
+    border-bottom: 1.5px solid #e0bf9f;
+}
