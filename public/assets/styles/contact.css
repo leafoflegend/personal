@@ -8,13 +8,13 @@ h2 {
 
 .form-input:focus {
     outline: none;
-    padding: 10px 0;
+    border-bottom: 1.5px solid #e0bf9f;
+    transition: all 0.25s;
 }
 
 input {
-    transition: all 0.25s;
     -webkit-backface-visibility: hidden;
-    font-size: 22px;
+    font-size: 22pt;
 }
 
 textarea {
@@ -27,5 +27,10 @@ input, textarea {
     padding: 5px 10px;
     background: transparent;
     border: transparent;
-    border-bottom: 1.5px solid #e0bf9f;
+    border-bottom: 1.5px solid gray;
+}
+
+.form-input {
+    position: relative;
+    margin-bottom: 60px;
 }
