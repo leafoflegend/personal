@@ -7,7 +7,6 @@ h2 {
 }
 
 .form-input:focus {
-    outline: none;
     border-bottom: 1.5px solid #e0bf9f;
     transition: all 0.25s;
 }
