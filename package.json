@@ -22,7 +22,6 @@
     "redux",
     "react-redux",
     "firebase",
-    "sass",
     "portfolio",
     "work",
     "projects",
@@ -31,9 +30,6 @@
     "branding"
   ],
   "author": "Eleni Arvanitis",
-  "collaborators": [
-    "Ashi Krishnan: initial firebase setup"
-  ],
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
