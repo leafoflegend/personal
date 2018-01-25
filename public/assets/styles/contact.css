@@ -8,7 +8,7 @@ h2 {
 
 .form-input:focus {
     border-bottom: 1.5px solid #e0bf9f;
-    transition: all 0.25s;
+    transition: all 0.25s ease-in-out;
 }
 
 input {
