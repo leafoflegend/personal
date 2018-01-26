@@ -10,6 +10,7 @@ import Home from '~/client/components/Home'
 import Work from '~/client/components/Work'
 import Articles from '~/client/components/Articles'
 import Contact from '~/client/components/Contact'
+import Footer from '~/client/components/Footer'
 
 // import firebase from 'firebase'
 
@@ -35,7 +36,7 @@ export default class App extends Component {
           {/*/>*/}
           <Route exact path="/contact" component={Contact}/>
         </Switch>
-        {/*<Footer />*/}
+        <Footer />
       </div>
     </Router>
   }
