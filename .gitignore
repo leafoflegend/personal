@@ -1,5 +1,6 @@
 node_modules
 functions/node_modules
+secrets.js
 
 # Emacs save files
 *~
@@ -14,6 +15,3 @@ fire/setup.js
 
 # resume
 public/assets/Eleni-Arvanitis-Resume.pdf
-
-# recaptcha
-recaptcha.js

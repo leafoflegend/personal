@@ -1,12 +1,15 @@
 import React from 'react';
-import { EntypoTwitter, EntypoMail, EntypoGithub, EntypoMedium } from 'react-entypo'
+import { socialLinks } from "~/secrets"
 
 export default () => {
     return <div className='footer'>
       <span>&copy;2018 Eleni Arvanitis</span>
-      <span><EntypoGithub/></span>
-      <span><EntypoTwitter/></span>
-      <span><EntypoMedium/></span>
-      <span><EntypoMail/></span>
+      {
+        socialLinks.map(link => {
+          return <span>
+              <a href={link[0]}>{link[1]}</a>
+            </span>
+        })
+      }
     </div>
 }
