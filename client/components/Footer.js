@@ -6,7 +6,7 @@ export default () => {
       <span>&copy;2018 Eleni Arvanitis</span>
       {
         socialLinks.map(link => {
-          return <span>
+          return <span key={link[0]}>
               <a href={link[0]}>{link[1]}</a>
             </span>
         })
