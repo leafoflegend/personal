@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha'
 
 import { siteKey, secretKey } from '../../recaptcha'
 import '~/public/assets/styles/contact.css'
@@ -27,7 +28,8 @@ export default class Contact extends Component {
           <textarea className='form-input'
                     name='message'
                     placeholder='* Message'/><br/>
-          <div data-sitekey={siteKey} data-theme="dark"/>
+          <ReCAPTCHA ref='recaptcha'
+                     sitekey={siteKey} theme='dark'/>
           <button>Submit</button>
         </label>
       </div>
