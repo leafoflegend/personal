@@ -1,6 +1,7 @@
 {
   "projects": {
     "eleni": "elenicodes",
-    "default": "eleni"
+    "default": "eleni",
+    "eleniarvanitis.com": "elenicodes"
   }
 }
