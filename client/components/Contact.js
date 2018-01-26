@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha'
 
-import { siteKey, secretKey } from '../../recaptcha'
+import { siteKey, secretKey } from '~/secrets'
 import '~/public/assets/styles/contact.css'
 
 // TODO: Fix validation
