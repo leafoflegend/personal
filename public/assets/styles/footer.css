@@ -1,0 +1,11 @@
+.copyright {
+    color: #858686
+}
+
+.social {
+    display: inline-flex;
+}
+
+.icons {
+    flex-basis: auto;
+}
