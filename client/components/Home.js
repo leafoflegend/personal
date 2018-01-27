@@ -8,22 +8,21 @@ const blurb = ''
       'a software engineer',
       'imaginative',
       'a teaching fellow',
-      '4th descriptor',
-      '5th descriptor'
+      'a gamer',
+      'a Ravenclaw',
+      ''
     ]
 
 export default () => {
   return <div className='text-carousel'>
-    <span className='description'>
-      Eleni Arvanitis is
-      <span className='content'>
+    <span>I am</span>
         {
           me.map((descriptor, i) => {
-            return <ul key={i} className='home-ul'>{descriptor}</ul>
+            return <span className='content'>
+              <p key={i} className='home-ul'>{descriptor}</p>
+            </span>
           })
         }
-      </span>
-    </span>
     <p>{blurb}</p>
     <NavLink to='/contact'>
       <button>Say hi</button>
