@@ -1,19 +1,12 @@
-.description {
-     display: inline;
- }
-
 .text-carousel {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    padding: 7% 3%; margin-left: 60%;
-    color: ghostwhite;
     font-size: 25px;
 }
 
 .content {
-    font-size: 15pt;
+    display: inline;
     font-weight: 300;
     color: #e0bf9f;
-    margin-bottom: 4%;
 }
