@@ -1,11 +1,13 @@
-.copyright {
-    color: #858686
+.footer {
+    padding: 5% 5% 2% 5%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.social {
-    display: inline-flex;
+.copyright {
+    color: #858686;
 }
 
 .icons {
-    flex-basis: auto;
+    padding: 0 5px;
 }
