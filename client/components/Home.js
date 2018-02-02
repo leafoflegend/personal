@@ -2,16 +2,17 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '~/public/assets/styles/home.css'
 
-// TODO: Make this a text carousel
-const blurb = ''
-    , me = [
+const me = [
       'a software engineer',
       'imaginative',
       'a teaching fellow',
+      'inquisitive',
       'a gamer',
+      'innovative',
       'a Ravenclaw',
-      ''
+      'intuitive',
     ]
+    , blurb = ``
 
 export default () => {
   return <div className='text-carousel'>
