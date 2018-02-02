@@ -15,11 +15,11 @@ const blurb = ''
 
 export default () => {
   return <div className='text-carousel'>
-    <span>I am</span>
+    I am
         {
           me.map((descriptor, i) => {
-            return <span className='content'>
-              <p key={i} className='home-ul'>{descriptor}</p>
+            return <span className='content' key={i}>
+                {descriptor}
             </span>
           })
         }
