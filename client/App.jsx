@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import '~/public/assets/styles/index.css'
@@ -14,30 +14,24 @@ import Footer from '~/client/components/Footer'
 
 // import firebase from 'firebase'
 
-export default class App extends Component {
-  constructor() {
-    super();
-  }
-
-  render() {
-    return <Router>
-      <div>
-        <Navbar/>
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route exact path="/about" component={About}/>
-          <Route exact path='/work' component={Work}/>
-          <Route exact path='/articles' component={Articles}/>
-          {/*<Route exact path='/articles/:articleId'*/}
-                 {/*component={({match: {params: {articleId}}}) =>*/}
-                   {/*<Article title={articleId}*/}
-                           {/*fireRef={db.ref('articles')*/}
-                             {/*.child(articleId)}/>}*/}
-          {/*/>*/}
-          <Route exact path="/contact" component={Contact}/>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
-  }
+export default () => {
+  return <Router>
+    <div>
+      <Navbar/>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route exact path="/about" component={About}/>
+        <Route exact path='/work' component={Work}/>
+        <Route exact path='/articles' component={Articles}/>
+        {/*<Route exact path='/articles/:articleId'*/}
+               {/*component={({match: {params: {articleId}}}) =>*/}
+                 {/*<Article title={articleId}*/}
+                         {/*fireRef={db.ref('articles')*/}
+                           {/*.child(articleId)}/>}*/}
+        {/*/>*/}
+        <Route exact path="/contact" component={Contact}/>
+      </Switch>
+      <Footer />
+    </div>
+  </Router>
 }
