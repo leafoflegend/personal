@@ -1,7 +1,3 @@
-.main-project-div {
-    padding-top: 5%;
-}
-
 .projects {
     align-items: center;
     justify-content: center;
@@ -9,10 +5,6 @@
     font-size: 28pt;
     font-weight: 800;
     text-align: center;
-}
-
-.projects:hover {
-    /*add photo for background to pop up!*/
 }
 
 .line {
@@ -46,4 +38,10 @@
     left: 100%;
     margin-left: 15px;
     padding-top: 5px;
+}
+
+button.resume-button {
+    position: relative;
+    display: flex;
+    align-items: center;
 }

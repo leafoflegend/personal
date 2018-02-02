@@ -13,6 +13,11 @@ const projects = [
 
 export default () => {
   return <div className='main-project-div'>
+    <a className='button-link'
+       href='/assets/Eleni-Arvanitis-Resume.pdf'
+       target='_blank'>
+      <button className='resume-button'>View Resume</button>
+    </a>
     {
       projects.map(project => {
         return <div key={project} className='projects'>
