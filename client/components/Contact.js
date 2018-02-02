@@ -33,6 +33,11 @@ export default class Contact extends Component {
           <button>Submit</button>
         </label>
       </div>
+      <a className='button-link'
+         href='/assets/Eleni-Arvanitis-Resume.pdf'
+         target='_blank'>
+        <button className='resume-button'>View Resume</button>
+      </a>
     </div>
   }
 }

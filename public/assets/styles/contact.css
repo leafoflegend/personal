@@ -37,3 +37,9 @@ input, textarea {
 input:invalid {
     border-bottom: 1.5px solid #ff3e4e;
 }
+
+button.resume-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+}

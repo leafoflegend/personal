@@ -1,3 +1,7 @@
+.main-project-div {
+    padding-top: 5%;
+}
+
 .projects {
     align-items: center;
     justify-content: center;
@@ -42,10 +46,4 @@
     left: 100%;
     margin-left: 15px;
     padding-top: 5px;
-}
-
-button.resume-button {
-    position: relative;
-    display: flex;
-    align-items: center;
 }
