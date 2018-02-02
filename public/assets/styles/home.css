@@ -1,12 +1,23 @@
-.text-carousel {
+.me {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 25px;
+    padding: 3%;
 }
 
-.content {
+.text-carousel {
+    font-size: 25px;
+    flex-direction: row;
+    width: 50%;
+}
+
+.carousel-items {
     font-weight: 800;
     color: #e0bf9f;
     padding: 0 0 0 0.8%;
+}
+
+.rec {
+    align-content: flex-end;
+    flex-direction: row;
+    width: 50%;
+    font-size: 28px;
 }
