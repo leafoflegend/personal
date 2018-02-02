@@ -44,4 +44,5 @@ button.resume-button {
     position: relative;
     display: flex;
     align-items: center;
+    margin: 4% auto;
 }

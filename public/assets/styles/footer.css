@@ -1,5 +1,5 @@
 .footer {
-    padding: 5% 5% 2% 5%;
+    padding: 5% 2% 2% 2%;
     display: flex;
     justify-content: space-between;
 }
@@ -9,5 +9,5 @@
 }
 
 .icons {
-    padding: 0 5px;
+    padding-left: 12px;
 }
