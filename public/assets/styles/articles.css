@@ -22,3 +22,7 @@ hr {
 .description {
     font-size: large;
 }
+
+button {
+    margin: 3% auto 5% auto;
+}
