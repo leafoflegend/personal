@@ -12,6 +12,8 @@ const projects = [
 ]
 
 export default () => {
+  window.scrollTo(0, 0)
+
   return <div className='main-project-div'>
     <a className='button-link'
        href='/assets/Eleni-Arvanitis-Resume.pdf'
