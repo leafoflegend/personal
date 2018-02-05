@@ -33,7 +33,7 @@ export default () => <div className='me'>
     {
       recs.map(rec => <div key={rec[1]}>
         <p className='rec-content'>"{rec[0]}"</p>
-        <p className='rec-name'>{rec[1]}</p>
+        <p className='rec-name'>- {rec[1]}</p>
       </div>)
     }
   </div>
