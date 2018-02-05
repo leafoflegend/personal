@@ -7,6 +7,11 @@
     cursor: default;
 }
 
+.detail:after {
+    height: 75%;
+    transition: height 250ms cubic-bezier(.4, 0, .2, 1);
+}
+
 .role {
     font-size: 20px;
     color: #e0bf9f;
@@ -26,6 +31,6 @@
     font-size: 12px;
 }
 
-a > button {
+button.button-links {
     margin: 5% 3% 0 3%;
 }
