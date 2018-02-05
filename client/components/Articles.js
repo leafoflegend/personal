@@ -5,7 +5,7 @@ import articles from '~/content/articles'
 export default () => {
   return <div className='all-articles'>
     {
-      links.map(article => {
+      articles.map(article => {
         return <div key={article[0]} className='article'>
           <h3 className='article-title'>{article[0]}</h3>
           <div>

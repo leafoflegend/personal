@@ -4,9 +4,6 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import { siteKey, secretKey } from '~/content/secrets'
 import '~/public/assets/styles/contact.css'
 
-// TODO: Fix validation
-// TODO: Send res to Google recaptcha with secretKey
-
 export default () => <div className='contact'>
   <h2>Let's Chat!</h2>
   <div className='contact-form'>
