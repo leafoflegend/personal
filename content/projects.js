@@ -2,9 +2,8 @@ const projects = [
   [
     'coquill',
     {
-      description: `An in-browser real-time collaborative text editor for screenplays.`,
-      role: `Engineer:
-      Firebase database setup with immutable.js, frontend design, and sentiment analysis`,
+      role: `Engineer`,
+      description: `An in-browser real-time collaborative text editor for screenplays. I helped my team structure our firebase database using immutable Maps with Facebook's immutable.js, spearheaded our site's sentiment analysis for future release, and helped with the frontend design. We released a MVP within a week, with a more in-depth version within two.`,
       technologies: [
         'firebase',
         'immutable.js',
@@ -20,8 +19,8 @@ const projects = [
   [
     'by land or sea',
     {
-      description: `So you want to go on vacation but don't know where you want to go? Ask "By Land or Sea," a smart voice-enabled app for all voice assistants made with the Google Assistant's SDK. Have a conversation with the assistant, and when you're done, she'll give you three options from which to choose. Book your vacation with the sound of your voice or a quick response to the chat-bot. Happy travels!`,
       role: 'Solo Engineer',
+      description: `So you want to go on vacation but don't know where you want to go? Ask "By Land or Sea," a smart voice-enabled app for all voice assistants made with the Google Assistant's SDK. Have a conversation with the assistant, and when you're done, she'll give you three options from which to choose. Book your vacation with the sound of your voice or a quick response to the chat-bot. Happy travels!`,
       technologies: [
         'dialogflow',
         'actions on google',
@@ -34,8 +33,8 @@ const projects = [
   [
     "'what is my purpose?'",
     {
-      description: `In one day, I created a robot inspired by the butter bot in "Rick and Morty." I used a kit to build the robot with parts and hooked the bot up to an Arduino. For speak purposes, I utilized Alexa Skills Kit to create a lambda function that would model the robot's responses after those in the show's episode (S1 E09). In the future, I will implement the ClarifAI API so that the robot will be able to use its camera to learn whether or not there is a human in front of it. If so, the butter bot will automatically engage in conversation, namely wondering what its purpose is in the world.`,
       role: 'Solo Engineer',
+      description: `In one day, I created a robot inspired by the butter bot in "Rick and Morty." I used a kit to build the robot with parts and hooked the bot up to an Arduino. For speak purposes, I utilized Alexa Skills Kit to create a lambda function that would model the robot's responses after those in the show's episode (S1 E09). In the future, I will implement the ClarifAI API so that the robot will be able to use its camera to learn whether or not there is a human in front of it. If so, the butter bot will automatically engage in conversation, namely wondering what its purpose is in the world.`,
       technologies: [
         'arduino',
         'alexa sdk',
@@ -44,16 +43,16 @@ const projects = [
         'clarifAI API',
       ],
       links: [
+        'https://www.youtube.com/watch?v=0mvH3GBVqtw',
         'https://github.com/DatGreekChick/purpose',
-        'https://www.youtube.com/watch?v=0mvH3GBVqtw'
       ]
     },
   ],
   [
     'witcher school of code',
     {
-      description: `A place where witchers no longer need to make coin by killing monsters.`,
       role: 'Solo Engineer',
+      description: `A place where witchers no longer need to make coin by killing monsters. I built my own SQL database with inspiration from "The Witcher 3: The Wild Hunt" using Sequelize.js. `,
       technologies: [
         'react', 'redux', 'react-redux',
         'sequelize',
@@ -65,12 +64,12 @@ const projects = [
   [
     'martinsville deli',
     {
-      description: `I took a pre-existing one-page website and turned it into an e-commerce platform worthy of the company's customers. Previously, the code was only placed in the one html file, but this, like all other projects of mine, focuses on best practices and clean, modular code. Works are in place for an app to make online ordering even more seamless and accessible.`,
       role: 'Solo Engineer',
+      description: `I took a pre-existing one-page website and turned it into an e-commerce platform worthy of the company's customers. Previously, the code was only placed in the one html file, but this, like all other projects of mine, focuses on best practices and clean, modular code. An app will also launch in the App Store for accessibility and ease of use.`,
       technologies: [
         'stripe',
         'firebase',
-        '',
+        'react', 'redux', 'react-redux',
       ],
       links: [
         'https://martinsvilledeli.com',
@@ -81,8 +80,8 @@ const projects = [
   [
     'chrome extension',
     {
-      description: ``,
       role: 'Engineer',
+      description: ``,
       technologies: [
         '',
       ],
@@ -94,8 +93,8 @@ const projects = [
   [
     'game',
     {
-      description: ``,
       role: 'Engineer',
+      description: ``,
       technologies: [
         '',
       ],

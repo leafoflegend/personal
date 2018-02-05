@@ -1,0 +1,31 @@
+.detail {
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 5px 15%;
+    cursor: default;
+}
+
+.role {
+    font-size: 20px;
+    color: #e0bf9f;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.project-description {
+    padding: 0 3%;
+}
+
+.tech {
+    border: 1px solid #e0bf9f;
+    border-radius: 8px;
+    padding: 7px 18px;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+a > button {
+    margin: 5% 3% 0 3%;
+}
