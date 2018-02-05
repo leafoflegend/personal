@@ -1,6 +1,6 @@
 node_modules
 functions/node_modules
-secrets.js
+content/secrets.js
 
 # Emacs save files
 *~
