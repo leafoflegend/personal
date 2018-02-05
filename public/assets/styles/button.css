@@ -39,7 +39,3 @@ button:hover:after {
 button:focus {
     outline: none;
 }
-
-.button-link:hover {
-    color: black;
-}
