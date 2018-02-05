@@ -50,6 +50,7 @@ const projects = [
       'react', 'redux', 'react-redux',
       'sequelize',
       'axios',
+      'express',
     ],
     links: ['https://github.com/datgreekchick/witcher'],
   },

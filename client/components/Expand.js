@@ -13,43 +13,39 @@ export default class Expand extends Component {
   }
 
   render() {
-    return (
-      projects.map(project => {
-        return <div key={project.name} className='project'>
-          <span className='line' onClick={this.toggle.bind(this)}>
-              {project.name.toUpperCase()}
-          </span>
-          { !this.state.isHidden && <div className='detail'>
-              <p className='role'>{project.role}</p>
-              <p className='description'>{project.description}</p>
-              <br/><br/>
-              {
-                project.technologies.map(technology => {
-                  return <span className='tech' key={technology}>
-                    {technology.toUpperCase()}
-                  </span>
-                })
-              }
-              <br/><br/>
-              {
-                project.links.length > 1
-                  ? project.links.map((link, i) => {
-                    return <a key={`${project.name}-link${i}`}
-                              href={link} target='_blank'>
-                      <button className='button-links'>
-                        {i === 0 ? 'demo' : 'code'}
-                      </button>
-                    </a>
-                  })
-                  : <a key={`${project.name}-link`} target='_blank'
-                       href={project.links[0]}>
-                    <button className='button-links'>code</button>
-                  </a>
-              }
-             </div>
+    return projects.map(project => {
+      return <div key={project.name} className='project'>
+        <span className='line' onClick={this.toggle.bind(this)}>
+            {project.name.toUpperCase()}
+        </span>
+        { !this.state.isHidden && <div className='detail'>
+          <p className='role'>{project.role}</p>
+          <p className='description'>{project.description}</p>
+          <br/><br/>
+          {
+            project.technologies.map(technology => {
+              return <span className='tech' key={technology}>
+                {technology.toUpperCase()}
+              </span>
+            })
           }
-        </div>
-      })
-    )
+          <br/><br/>
+          {
+            project.links.map((link, i) => {
+              return <a key={`${project.name}${i}-link`}
+                        href={link} target='_blank'>
+                <button className='button-links'>
+                  {
+                    project.links.length === 1
+                      ? 'code'
+                      : i === 0 ? 'demo' : 'code'
+                  }
+                </button>
+              </a>
+            })
+          }
+        </div>}
+      </div>
+    })
   }
 }
