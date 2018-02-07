@@ -18,34 +18,36 @@ export default class Expand extends Component {
         <span className='line' onClick={this.toggle}>
             {project.name.toUpperCase()}
         </span>
-        { !isHidden && selectedElem === project.name.toUpperCase() &&
-        <div className='detail'>
-          <p className='role'>{project.role}</p>
-          <p className='description'>{project.description}</p>
-          <br/><br/>
-          {
-            project.technologies.map(technology => {
-              return <span className='tech' key={technology}>
-                {technology.toUpperCase()}
-              </span>
-            })
-          }
-          <br/><br/>
-          {
-            project.links.map((link, i) => {
-              return <a key={`${project.name}${i}-link`}
-                        href={link} target='_blank'>
-                <button className='button-links'>
-                  {
-                    project.links.length === 1
-                      ? 'code'
-                      : i === 0 ? 'demo' : 'code'
-                  }
-                </button>
-              </a>
-            })
-          }
-        </div>}
+        { !isHidden && selectedElem === project.name.toUpperCase()
+          ? <div className='detail'>
+            <p className='role'>{project.role}</p>
+            <p className='description'>{project.description}</p>
+            <br/><br/>
+            {
+              project.technologies.map(technology => {
+                return <span className='tech' key={technology}>
+                  {technology.toUpperCase()}
+                </span>
+              })
+            }
+            <br/><br/>
+            {
+              project.links.map((link, i) => {
+                return <a key={`${project.name}${i}-link`}
+                          href={link} target='_blank'>
+                  <button className='project-links'>
+                    {
+                      project.links.length === 1
+                        ? 'code'
+                        : i === 0 ? 'demo' : 'code'
+                    }
+                  </button>
+                </a>
+              })
+            }
+          </div>
+          : null
+        }
       </div>
     })
   }
