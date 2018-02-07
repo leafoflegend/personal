@@ -34,6 +34,7 @@ input, textarea {
     margin-bottom: 60px;
 }
 
-input:invalid {
-    border-bottom: 1.5px solid #ff3e4e;
-}
+/*input:invalid,*/
+/*textarea:invalid {*/
+    /*border-bottom: 1.5px solid #ff3e4e;*/
+/*}*/
