@@ -1,23 +1,24 @@
 .me {
     display: flex;
-    padding: 3%;
+    flex-wrap: wrap;
+    padding: 0 3%;
 }
 
 .text-carousel {
+    padding: 7% 3%; margin-left: 60%;
     font-size: 25px;
-    flex-direction: row;
-    width: 50%;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .carousel-items {
     font-weight: 800;
     color: #e0bf9f;
-    padding: 0 0 0 0.8%;
+    padding: 0 0 0 5%;
 }
 
-.rec {
-    align-content: flex-end;
-    flex-direction: row;
-    width: 50%;
-    font-size: 28px;
+.home-description {
+    font-size: 15pt;
+    font-weight: 300;
+    margin: 10% 0 0 0; padding: 0 0 10% 0;
 }
