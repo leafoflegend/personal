@@ -19,7 +19,11 @@ export default class Form extends Component {
 
   recaptchaChange = val => console.log(`Recaptcha value: ${val}`)
 
-  handleSubmit = evt => evt.preventDefault()
+  handleSubmit = (evt) => {
+    evt.preventDefault()
+
+    // const { name, email, msg } = this.state.contact
+  }
 
   render() {
     const inputs = [
@@ -30,8 +34,7 @@ export default class Form extends Component {
     return <div className='contact-form'>
       <form onSubmit={this.handleSubmit}>
         {
-          inputs.map(input => <label className='form-label'
-                                     key={input.type}>
+          inputs.map(input => <label className='form-label' key={input.type}>
             <input className='form-input' type={`${input.type}`}
                    name={`${input.name}`} required
                    onChange={this.handleChange(input.name.toLowerCase())}
@@ -45,7 +48,7 @@ export default class Form extends Component {
         </label>
         <ReCAPTCHA ref='recaptcha' sitekey={siteKey} theme='dark'
                    onChange={this.recaptchaChange}/>
-        <button>Submit</button>
+        <button type='submit'>Submit</button>
       </form>
     </div>
   }
