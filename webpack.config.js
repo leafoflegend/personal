@@ -32,7 +32,17 @@ const config = env => ({
     {
       test: /\.(txt|md|markdown)$/,
       use: 'raw-loader',
+    },
+    {
+      test: /\.json$/,
+      use: 'json-loader'
     }]
+  },
+  node: {
+    console: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
   },
   plugins: plugins(env),
 })

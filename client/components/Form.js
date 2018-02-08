@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
-
 import { siteKey, secretKey } from '~/content/secrets'
+const request = require('request')
 
 export default class Form extends Component {
   state = { contact: {} }
@@ -17,7 +17,22 @@ export default class Form extends Component {
     this.setState({ contact: newContact });
   }
 
-  recaptchaChange = val => console.log(`Recaptcha value: ${val}`)
+  reCAPTCHAChange = (secret, res) => {
+    console.log(`reCAPTCHA val: ${res}`)
+
+    request({
+      uri: 'https://www.google.com/recaptcha/api/siteverify',
+      method: 'POST',
+      form: {
+        secret: secretKey,
+        response: req.body['g-recaptcha-response']
+      }
+    },
+    (err, res, body) => {
+      if (err) console.error(err)
+      else console.log(`request body: ${body}`)
+    })
+  }
 
   handleSubmit = (evt) => {
     evt.preventDefault()
@@ -47,7 +62,7 @@ export default class Form extends Component {
                     onChange={this.handleChange('message')}/><br/>
         </label>
         <ReCAPTCHA ref='recaptcha' sitekey={siteKey} theme='dark'
-                   onChange={this.recaptchaChange}/>
+                   onChange={this.reCAPTCHAChange}/>
         <button type='submit'>Submit</button>
       </form>
     </div>
