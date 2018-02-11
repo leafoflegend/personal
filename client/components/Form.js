@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { siteKey, secretKey } from '~/content/secrets'
+import { siteKey, secretKey, action } from '~/content/secrets'
 const request = require('request')
 
 export default class Form extends Component {
@@ -17,15 +17,17 @@ export default class Form extends Component {
     this.setState({ contact: newContact });
   }
 
-  reCAPTCHAChange = (secret, res) => {
-    console.log(`reCAPTCHA val: ${res}`)
-
+  reCAPTCHAChange = req => {
     request({
       uri: 'https://www.google.com/recaptcha/api/siteverify',
       method: 'POST',
-      form: {
+      headers: {
+        'Access-Control-Allow-Origin': 'https://eleniarvanitis.com',
+        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS'
+      },
+      data: {
         secret: secretKey,
-        response: req.body['g-recaptcha-response']
+        response: req
       }
     },
     (err, res, body) => {
@@ -34,7 +36,7 @@ export default class Form extends Component {
     })
   }
 
-  handleSubmit = (evt) => {
+  handleSubmit = evt => {
     evt.preventDefault()
 
     // const { name, email, msg } = this.state.contact
@@ -47,7 +49,7 @@ export default class Form extends Component {
     ]
 
     return <div className='contact-form'>
-      <form onSubmit={this.handleSubmit}>
+      <form id='gform' onSubmit={this.handleSubmit} action={action}>
         {
           inputs.map(input => <label className='form-label' key={input.type}>
             <input className='form-input' type={`${input.type}`}
