@@ -48,25 +48,23 @@ export default class Form extends Component {
       { type: 'email', name: 'Email', value: this.state.email }
     ]
 
-    return <div className='contact-form'>
-      <form id='gform' onSubmit={this.handleSubmit} action={action}>
-        {
-          inputs.map(input => <label className='form-label' key={input.type}>
-            <input className='form-input' type={`${input.type}`}
-                   name={`${input.name}`} required
-                   onChange={this.handleChange(input.name.toLowerCase())}
-                   placeholder={input.name} value={input.value}/><br/>
-          </label>)
-        }
-        <label className='form-label'>
-          <textarea className='form-input' name='message'
-                    placeholder='Message' value={this.state.msg}
-                    onChange={this.handleChange('message')}/><br/>
-        </label>
-        <ReCAPTCHA ref='recaptcha' sitekey={siteKey} theme='dark'
-                   onChange={this.reCAPTCHAChange}/>
-        <button type='submit'>Submit</button>
-      </form>
-    </div>
+    return <form id='gform' onSubmit={this.handleSubmit} action={action}>
+      {
+        inputs.map(input => <label className='form-label' key={input.type}>
+          <input className='form-input' type={`${input.type}`}
+                 name={`${input.name}`} required
+                 onChange={this.handleChange(input.name.toLowerCase())}
+                 placeholder={input.name} value={input.value}/><br/>
+        </label>)
+      }
+      <label className='form-label'>
+        <textarea className='form-input' name='message'
+                  placeholder='Message' value={this.state.msg}
+                  onChange={this.handleChange('message')}/><br/>
+      </label>
+      <ReCAPTCHA ref='recaptcha' sitekey={siteKey} theme='dark'
+                 onChange={this.reCAPTCHAChange}/>
+      <button type='submit'>Submit</button>
+    </form>
   }
 }

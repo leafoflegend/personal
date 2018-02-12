@@ -1,5 +1,6 @@
 .contact {
-    display: block;
+    overflow: hidden;
+    display: flex;
     padding-left: 5%;
 }
 
@@ -20,7 +21,7 @@ textarea {
 
 input, textarea {
     font-size: 22px;
-    width: 40%;
+    width: 100%;
     padding: 5px 0;
     background: transparent;
     border: transparent;
@@ -38,5 +39,5 @@ input, textarea {
 }
 
 .other-methods {
-
+    padding: 15% 0 0 25%;
 }
