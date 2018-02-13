@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react'
 
 import '~/public/assets/styles/articles.css'
-import articles from '~/content/articles'
+import { db } from '~/content/projects'
 
-export default () => <div className='all-articles'>
-  {
-    articles.map(article => <div key={article[0]} className='article'>
-        <h3 className='article-title'>{article[0]}</h3>
-        <p className='date-posted'>{article[1]}</p>
-        <p className='description'>{article[2]}</p><br/>
-        <a href={article[3]} target='_blank'>
-          <button>Read More ↗</button>
-        </a>
-        <hr/>
-      </div>)
+export default class Articles extends Component {
+  state = { articles: [] }
+
+  componentDidMount() {
+    db.ref('articles')
+      .orderByChild('date-posted')
+      .on('child_added', snap => this.setState({
+        articles: [...this.state.articles, snap.val()]
+      }))
   }
-</div>
+
+  render() {
+    const { articles } = this.state
+
+    return <div className='all-articles'>
+      {
+        articles.map(article => <div key={article.title}
+                                     className='article'>
+          <h3 className='article-title'>{article.title}</h3>
+          <p className='date-posted'>{article['date-posted']}</p>
+          <p className='description'>{article.description}</p><br/>
+          <a href={article.link} target='_blank'>
+            <button>Read More ↗</button>
+          </a>
+          <hr/>
+        </div>)
+      }
+    </div>
+  }
+}
