@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import '~/public/assets/styles/articles.css'
-import { db } from '~/content/projects'
+import db from '~/content/fire'
 
 export default class Articles extends Component {
   state = { articles: [] }

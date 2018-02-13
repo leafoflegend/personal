@@ -1,9 +1,29 @@
 import React, { Component } from 'react'
 import '~/public/assets/styles/expand.css'
-import projects from '~/content/projects'
+import db from '~/content/fire'
 
 export default class Expand extends Component {
-  state = { isHidden: true, selectedElem: '' }
+  state = { projects: [], isHidden: true, selectedElem: '' }
+
+  componentDidMount() {
+    db.ref('projects')
+      .on('child_added', snap => {
+        const techStack = []
+        for (const techUsed in snap.val().technologies) {
+          techStack.push(techUsed)
+        }
+
+        this.setState({
+          projects: [...this.state.projects, {
+              name: snap.val().name,
+              role: snap.val().role,
+              description: snap.val().description,
+              technologies: techStack,
+              links: [ snap.val().links ]
+           }]
+        })
+      })
+  }
 
   toggle = (evt) => this.setState({
     isHidden: !this.state.isHidden,
@@ -11,7 +31,7 @@ export default class Expand extends Component {
   })
 
   render() {
-    const { isHidden, selectedElem } = this.state;
+    const { projects, isHidden, selectedElem } = this.state;
 
     return projects.map(project => {
       return <div key={project.name} className='project'>
@@ -32,14 +52,15 @@ export default class Expand extends Component {
             }
             <br/><br/>
             {
-              project.links.map((link, i) => {
-                return <a key={`${project.name}${i}-link`}
+              Object.values(project.links[0]).map((link, i) => {
+                return <a key={`${project.name}-link${i}`}
                           href={link} target='_blank'>
                   <button className='project-links'>
                     {
-                      project.links.length === 1
+                      link.includes('github')
                         ? 'code'
-                        : i === 0 ? 'demo' : 'code'
+                        : link.includes('youtube')
+                          ? 'youtube' : 'demo'
                     }
                   </button>
                 </a>
