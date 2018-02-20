@@ -1,23 +1,21 @@
 import React, { Component } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 import { siteKey, secretKey, action } from '~/content/secrets'
-const request = require('request')
+import request from 'request'
 
 export default class Form extends Component {
-  state = { contact: {} }
+  state = { name: '', email: '', message: '' }
 
   handleChange = propertyName => evt => {
-    const { contact } = this.state
-          , newContact = {
-            ...contact,
-            [propertyName]: evt.target.value
-          }
+    console.log(`${propertyName}: ${this.state[propertyName]}`)
 
-    console.log(`${propertyName}: ${newContact[propertyName]}`)
-    this.setState({ contact: newContact });
+    this.setState({
+      ...this.state,
+      [propertyName]: evt.target.value
+    })
   }
 
-  reCAPTCHAChange = req => {
+  reCAPTCHAChange = res => {
     request({
       uri: 'https://www.google.com/recaptcha/api/siteverify',
       method: 'POST',
@@ -27,7 +25,7 @@ export default class Form extends Component {
       },
       data: {
         secret: secretKey,
-        response: req
+        response: res
       }
     },
     (err, res, body) => {
@@ -38,28 +36,29 @@ export default class Form extends Component {
 
   handleSubmit = evt => {
     evt.preventDefault()
-
-    // const { name, email, msg } = this.state.contact
+    this.setState({ name: '',  email: '', message: '' })
   }
 
   render() {
-    const inputs = [
-      { type: 'text', name: 'Name', value: this.state.name },
-      { type: 'email', name: 'Email', value: this.state.email }
-    ]
+    const { name, email, message } = this.state
+          , inputs = [
+            { type: 'text', name: 'Name', value: name },
+            { type: 'email', name: 'Email', value: email },
+          ]
 
-    return <form id='gform' onSubmit={this.handleSubmit} action={action}>
+    return <form id='gform' onSubmit={this.handleSubmit}
+                 action={action} method="POST">
       {
         inputs.map(input => <label className='form-label' key={input.type}>
-          <input className='form-input' type={`${input.type}`}
-                 name={`${input.name}`} required
+          <input className='form-input' type={input.type}
+                 name={input.name} required
                  onChange={this.handleChange(input.name.toLowerCase())}
                  placeholder={input.name} value={input.value}/><br/>
         </label>)
       }
       <label className='form-label'>
         <textarea className='form-input' name='message'
-                  placeholder='Message' value={this.state.msg}
+                  placeholder='Message' value={message}
                   onChange={this.handleChange('message')}/><br/>
       </label>
       <ReCAPTCHA ref='recaptcha' sitekey={siteKey} theme='dark'

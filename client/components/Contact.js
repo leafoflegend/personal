@@ -2,6 +2,7 @@ import React from 'react'
 import Form from './Form'
 
 import '~/public/assets/styles/contact.css'
+import '~/public/assets/styles/arrows.css'
 
 export default () => {
   window.scroll(0,0)
@@ -12,7 +13,10 @@ export default () => {
       <Form/>
     </div>
     <div className='other-methods'>
-      <p>Forms not your style? Reach out to me here:</p>
+      <span>Forms not your style?</span><br/>
+      <span>Contact me here:</span>
+      <div className='arrows'>
+      </div>
     </div>
   </div>
 }
