@@ -8,15 +8,15 @@ export default () => {
   window.scroll(0,0)
 
   return <div className='contact'>
+    <h2>Let's Work Together!</h2>
     <div className='contact-form'>
-      <h2>Let's Chat!</h2>
-      <Form/>
-    </div>
-    <div className='other-methods'>
-      <span>Forms not your style?</span><br/>
-      <span>Contact me here:</span>
-      <div className='arrows'>
-      </div>
+      <span><Form/></span>
+      <span className='contact-footer'>
+        <span>Forms not your style?</span><br/>
+        <span>Contact me here:</span>
+        <div className='arrows'>
+        </div>
+      </span>
     </div>
   </div>
 }

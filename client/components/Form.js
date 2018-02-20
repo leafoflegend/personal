@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { siteKey, secretKey, action } from '~/content/secrets'
-import request from 'request'
+import { siteKey, action } from '~/content/secrets'
 
 export default class Form extends Component {
-  state = { name: '', email: '', message: '' }
+  state = { name: '', email: '', message: '', 'g-recaptcha-response': '' }
 
   handleChange = propertyName => evt => {
     console.log(`${propertyName}: ${this.state[propertyName]}`)
@@ -15,23 +14,8 @@ export default class Form extends Component {
     })
   }
 
-  reCAPTCHAChange = res => {
-    request({
-      uri: 'https://www.google.com/recaptcha/api/siteverify',
-      method: 'POST',
-      headers: {
-        'Access-Control-Allow-Origin': 'https://eleniarvanitis.com',
-        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS'
-      },
-      data: {
-        secret: secretKey,
-        response: res
-      }
-    },
-    (err, res, body) => {
-      if (err) console.error(err)
-      else console.log(`request body: ${body}`)
-    })
+  verifyHumanity = req => {
+    this.setState({ 'g-recaptcha-response': req })
   }
 
   handleSubmit = evt => {
@@ -62,7 +46,7 @@ export default class Form extends Component {
                   onChange={this.handleChange('message')}/><br/>
       </label>
       <ReCAPTCHA ref='recaptcha' sitekey={siteKey} theme='dark'
-                 onChange={this.reCAPTCHAChange}/>
+                 onChange={this.verifyHumanity}/>
       <button type='submit'>Submit</button>
     </form>
   }
