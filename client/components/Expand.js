@@ -5,33 +5,22 @@ import db from '~/content/fire'
 export default class Expand extends Component {
   state = { projects: [], isHidden: true, selectedElem: '' }
 
-  componentDidMount() {
-    db.ref('projects')
-      .on('child_added', snap => {
-        const techStack = []
-        for (const techUsed in snap.val().technologies) {
-          techStack.push(techUsed)
+  componentWillMount() {
+    db.ref('work')
+      .once('value', snap => {
+        for (let i = 0; i < snap.val().length; i++) {
+          this.setState({ projects: [...this.state.projects, snap.val()[i]] })
         }
-
-        this.setState({
-          projects: [...this.state.projects, {
-              name: snap.val().name,
-              role: snap.val().role,
-              description: snap.val().description,
-              technologies: techStack,
-              links: [ snap.val().links ]
-           }]
-        })
       })
   }
 
-  toggle = (evt) => this.setState({
+  toggle = evt => this.setState({
     isHidden: !this.state.isHidden,
     selectedElem: evt.target.innerText
   })
 
   render() {
-    const { projects, isHidden, selectedElem } = this.state;
+    const { projects, isHidden, selectedElem } = this.state
 
     return projects.map(project => {
       return <div key={project.name} className='project'>
@@ -52,14 +41,19 @@ export default class Expand extends Component {
             }
             <br/><br/>
             {
-              Object.values(project.links[0]).map((link, i) => {
+              project.links.map((link, i) => {
                 return <a key={`${project.name}-link${i}`}
-                          href={link} target='_blank'>
+                          href={
+                            link['code']
+                              ? link['code']
+                              : link['youtube']
+                                ? link['youtube'] : link['demo']
+                          } target='_blank'>
                   <button className='project-links'>
                     {
-                      link.includes('github')
+                      link['code']
                         ? 'code'
-                        : link.includes('youtube')
+                        : link['youtube']
                           ? 'youtube' : 'demo'
                     }
                   </button>

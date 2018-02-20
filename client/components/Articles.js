@@ -8,10 +8,11 @@ export default class Articles extends Component {
 
   componentDidMount() {
     db.ref('articles')
-      .orderByChild('date-posted')
-      .on('child_added', snap => this.setState({
-        articles: [...this.state.articles, snap.val()]
-      }))
+      .once('value', snap => {
+        for (let i = snap.val().length - 1; i > -1; i--) {
+          this.setState({ articles: [...this.state.articles, snap.val()[i]] })
+        }
+      })
   }
 
   render() {
