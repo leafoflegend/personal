@@ -17,10 +17,10 @@ export default () => <Router>
     <Navbar/>
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route path="/about" component={About}/>
-      <Route path='/work' component={Work}/>
-      <Route path='/articles' component={Articles}/>
-      <Route path="/contact" component={Contact}/>
+      <Route exact path="/about" component={About}/>
+      <Route exact path='/work' component={Work}/>
+      <Route exact path='/articles' component={Articles}/>
+      <Route exact path="/contact" component={Contact}/>
     </Switch>
     <Footer/>
   </div>
