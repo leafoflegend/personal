@@ -47,5 +47,6 @@ input, textarea {
 }
 
 .contact-footer {
-    font-size: 28px;
+    padding-top: 5%;
+    font-size: 22px;
 }

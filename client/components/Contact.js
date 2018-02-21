@@ -1,5 +1,6 @@
 import React from 'react'
 import Form from './Form'
+import { callToContact } from '~/content/about'
 
 import '~/public/assets/styles/contact.css'
 import '~/public/assets/styles/arrows.css'
@@ -11,12 +12,11 @@ export default () => {
     <h2>Let's Work Together!</h2>
     <div className='contact-form'>
       <span><Form/></span>
-      <span className='contact-footer'>
-        <span>Forms not your style?</span><br/>
-        <span>Contact me here:</span>
+      <div className='contact-footer'>
+        { callToContact.map(line => <span>{line}<br/></span>) }
         <div className='arrows'>
         </div>
-      </span>
+      </div>
     </div>
   </div>
 }
