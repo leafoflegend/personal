@@ -6,7 +6,7 @@ import '~/public/assets/styles/navbar.css'
 const logo = '/assets/img/ea-logo-cream.png'
     , nav = ['about', 'work', 'articles', 'contact']
 
-export default () => <nav className="nav-bar">
+export default () => <nav role='navigation' className="nav-bar">
   <NavLink to='/'>
     <img className="logo" src={logo} alt="ea-logo-cream"/>
   </NavLink>
