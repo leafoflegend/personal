@@ -38,25 +38,25 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "chalk": "^2.3.0",
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.9",
     "firebase-tools": "^3.16.0",
+    "json-loader": "^0.5.7",
     "react-hot-loader": "^3.1.2",
     "strip-ansi": "^4.0.0",
+    "style-loader": "^0.19.1",
     "sw-precache-webpack-plugin": "^0.11.4",
     "through2": "^2.0.3",
+    "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "chokidar": "^1.7.0",
-    "css-loader": "^0.28.7",
-    "file-loader": "^1.1.6",
     "firebase": "^4.8.0",
     "firebase-admin": "^5.5.1",
-    "fs": "0.0.1-security",
-    "json-loader": "^0.5.7",
     "minimist": "^1.2.0",
-    "npm": "^5.6.0",
     "react": "^16.2.0",
     "react-async-script": "^0.9.1",
     "react-dom": "^16.2.0",
@@ -64,9 +64,6 @@
     "react-google-recaptcha": "^0.9.9",
     "react-router-dom": "^4.2.2",
     "react-text-loop": "^1.1.0",
-    "request": "^2.83.0",
-    "style-loader": "^0.19.1",
-    "t2-cli": "^0.1.17",
-    "url-loader": "^0.6.2"
+    "request": "^2.83.0"
   }
 }
