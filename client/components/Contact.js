@@ -13,7 +13,7 @@ export default () => {
     <div className='contact-form'>
       <span><Form/></span>
       <div className='contact-footer'>
-        { callToContact.map(line => <span>{line}<br/></span>) }
+        { callToContact.map(line => <span key={line}>{line}<br/></span>) }
         <div className='arrows'>
         </div>
       </div>
