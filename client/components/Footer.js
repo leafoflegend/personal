@@ -9,7 +9,7 @@ export default () => {
       <div>
         {
           socialLinks.map(link => <a key={link[0]} className='icons'
-                                     href={link[0]} target='_blank'>
+                                     href={link[0]} rel='noopener'>
               {link[1]}
             </a>)
         }

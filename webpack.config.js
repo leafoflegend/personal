@@ -2,6 +2,7 @@
 const webpack = require('webpack')
     , babel = require('./babel.config')
     , {isHot, isProd} = require('./env.config')
+    , SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 const config = env => ({
   entry: entries(env, './main.js'),
@@ -57,6 +58,14 @@ const plugins = env => isHot(env) ? [
   new webpack.NamedModulesPlugin,          // Better module names in the browser
                                            // console on HMR updates
   new webpack.NoEmitOnErrorsPlugin,        // Don't emit on errors.
+  new SWPrecacheWebpackPlugin({
+      cacheId: 'v1',
+      dontCacheBustUrlsMatching: /\.\w{8}\./,
+      filename: 'sw.js',
+      minify: true,
+      navigateFallback: 'https://eleniarvanitis.com/index.html',
+      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+    }),
 ] : []
 
 function devServer(env) {
