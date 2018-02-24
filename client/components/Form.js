@@ -26,8 +26,8 @@ export default class Form extends Component {
   render() {
     const { name, email, message } = this.state
           , inputs = [
-            { type: 'text', name: 'Name', value: name },
-            { type: 'email', name: 'Email', value: email },
+            { type: 'text', name: 'Name', value: name, placeholder: 'Bilbo Baggins' },
+            { type: 'email', name: 'Email', value: email, placeholder: 'burglar@shire.com' },
           ]
 
     return <form id='gform' onSubmit={this.handleSubmit}
@@ -37,13 +37,13 @@ export default class Form extends Component {
           <input className='form-input' type={input.type}
                  name={input.name} required
                  onChange={this.handleChange(input.name.toLowerCase())}
-                 placeholder={input.name} value={input.value}/><br/>
+                 placeholder={input.placeholder} value={input.value}/><br/>
         </label>)
       }
       <label className='form-label'>
         <textarea className='form-input' name='message'
-                  placeholder='Message' value={message}
-                  onChange={this.handleChange('message')}/><br/>
+                  placeholder="We're looking for a wizard to travel with us to the Lonely Mountain"
+                  value={message} onChange={this.handleChange('message')}/><br/>
       </label>
       <ReCAPTCHA ref='recaptcha' sitekey={siteKey} theme='dark'
                  onChange={this.verifyHumanity}/>
