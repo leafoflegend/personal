@@ -4,7 +4,7 @@ const babel = module.exports = env => ({
   loader: 'babel-loader',
   options: {
     presets: [
-      ['env', {modules: false}],
+      ["transform-react-jsx", { "pragma": "h" }],
       'stage-2',
       'react',
     ],
