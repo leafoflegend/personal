@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from 'firebase'
 
 // Initialize firebase with config obj directly placed
 const fire = firebase.initializeApp({

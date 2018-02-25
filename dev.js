@@ -31,7 +31,7 @@ spawn('🤖 build library',
 
 // Run `firebase serve`
 const firebaseServe = spawn('🔥  firebase serve',
-  'npx', ['firebase', 'serve', '--only', 'functions,hosting'], forceColor)
+  'npx', ['firebase', 'serve', '--only', 'hosting'], forceColor)
 
 // Scan through its output...
 firebaseServe.stdout

@@ -1,5 +1,4 @@
 node_modules
-functions/node_modules
 content/secrets.js
 content/about.js
 
@@ -9,10 +8,8 @@ content/about.js
 # Compilation artifacts
 public/bundle.js
 public/bundle.js.map
-functions/lib.js
-
-# firebase config
-fire/setup.js
+public/prod.js
+public/prod.js.gz
 
 # resume
 public/assets/Eleni-Arvanitis-Resume.pdf
