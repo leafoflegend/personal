@@ -1,10 +1,9 @@
 'use strict'
-const webpack = require('webpack')
-  , nodeExternals = require('webpack-node-externals')
-  , CompressionPlugin = require('compression-webpack-plugin')
-  , UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-  , SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
-  , HtmlWebpackPlugin = require('html-webpack-plugin');
+const nodeExternals = require('webpack-node-externals')
+    , CompressionPlugin = require('compression-webpack-plugin')
+    , UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+    , SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+    , HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
