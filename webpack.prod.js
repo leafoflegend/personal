@@ -20,9 +20,9 @@ module.exports = {
       loader: 'babel-loader',
       query: {
         presets: [
-          ['env', { modules: false }],
+          ['env', { modules: false, loose: true }],
           'react',
-          'stage-2'
+          'stage-2',
         ],
       }
     }, {
