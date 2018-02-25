@@ -4,25 +4,26 @@ const webpack = require('webpack')
     , CompressionPlugin = require('compression-webpack-plugin')
     , UglifyJsPlugin = require('uglifyjs-webpack-plugin')
     , SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
-    , HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: {
-    app: './main.js'
-  },
+  entry: { app: '~/main.js' },
   output: {
-    filename: 'prod.js', // <-- Important
+    filename: 'prod.js',
     path: `${__dirname}/public`,
-    libraryTarget: 'commonjs', // <-- Important
+    libraryTarget: 'commonjs',
   },
-  target: 'node', // <-- Important
+  target: 'node',
   module: {
     rules: [{
       test: /jsx?$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
-        presets: ['env', 'react', 'stage-2'],
+        presets: [
+          ['env', { modules: false }],
+          'react',
+          'stage-2'
+        ],
       }
     }, {
       test: /\.(jpeg|jpg|png|)$/,
@@ -59,5 +60,5 @@ module.exports = {
   externals: [
     nodeExternals(),
     { 'firebase-functions': false },
-  ] // <-- Important
+  ]
 }
