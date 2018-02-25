@@ -63,7 +63,7 @@ const plugins = env => isHot(env) ? [
     filename: 'sw.js',
     minify: true,
     navigateFallback: 'https://eleniarvanitis.com/index.html',
-    staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+    staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/],
   }),
 ] : []
 
