@@ -1,5 +1,6 @@
 'use strict'
-const nodeExternals = require('webpack-node-externals')
+const webpack = require('webpack')
+    , nodeExternals = require('webpack-node-externals')
     , CompressionPlugin = require('compression-webpack-plugin')
     , UglifyJsPlugin = require('uglifyjs-webpack-plugin')
     , SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
@@ -53,22 +54,10 @@ module.exports = {
     new UglifyJsPlugin({
       exclude: /node_modules/
     }),
-    new CompressionPlugin({
-      test: /\.(js|css|html)$/,
-      algorithm: 'gzip',
-      threshold: 10240,
-      minRatio: 0.8
-    }),
+    new webpack.optimize.AggressiveMergingPlugin()
   ],
   externals: [
     nodeExternals(),
     { 'firebase-functions': false },
   ] // <-- Important
-}
-
-{
-  new HtmlWebpackPlugin({
-    template: './public/index.html',
-    inject: 'body',
-  })
 }
