@@ -10,6 +10,7 @@ public/bundle.js
 public/bundle.js.map
 public/prod.js
 public/prod.js.gz
+public/sw.js
 
-# resume
+# Resume
 public/assets/Eleni-Arvanitis-Resume.pdf
