@@ -2,7 +2,6 @@
 const webpack = require('webpack')
     , nodeExternals = require('webpack-node-externals')
     , CompressionPlugin = require('compression-webpack-plugin')
-    , UglifyJsPlugin = require('uglifyjs-webpack-plugin')
     , SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 module.exports = {
@@ -51,9 +50,6 @@ module.exports = {
       minify: true,
       navigateFallback: 'https://eleniarvanitis.com/index.html',
       staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/],
-    }),
-    new UglifyJsPlugin({
-      exclude: /node_modules/
     }),
     new webpack.optimize.AggressiveMergingPlugin()
   ],
