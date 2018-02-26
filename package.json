@@ -4,16 +4,14 @@
   "version": "0.0.1",
   "description": "My personal website featuring my portfolio and my writing pieces.",
   "main": "main.js",
+  "sideEffects": false,
   "scripts": {
     "prepare": "firebase use --add",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dev",
-    "build": "webpack -p",
-    "watch-lib": "npm run build-lib -- -w",
-    "build-lib": "webpack --config webpack.prod.js",
-    "build-lib-prod": "npm run build-lib -- -p",
-    "build-prod": "npm run build-lib-prod",
-    "deploy": "npm run build-prod && npx firebase deploy"
+    "build": "webpack -p --config webpack-config/webpack.config.js",
+    "watch": "npm run build -- -w",
+    "deploy": "npm run build && npx firebase deploy"
   },
   "author": "Eleni Arvanitis",
   "license": "ISC",

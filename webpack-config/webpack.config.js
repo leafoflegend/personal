@@ -1,18 +1,24 @@
 'use strict'
 const webpack = require('webpack')
-    , babel = require('./babel.config')
-    , {isHot, isProd} = require('./env.config')
+  , babel = require('./babel.config')
+  , { dirname } = require('path')
+  , parent = dirname(__dirname)
+  , nodeExternals = require('webpack-node-externals')
+  , { isHot, isProd } = require('./env.config')
+  , SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 const config = env => ({
-  entry: entries(env, './main.js'),
+  entry: entries(env, `${parent}/main.js`),
   output: {
     filename: 'bundle.js',
-    path: `${__dirname}/public`,
+    path: `${parent}/public`,
   },
+  context: parent,
+  target: 'node',
   devtool: 'inline-source-map',
   resolve: {
     extensions: [ '.jsx', '.js', '.json' ],
-    alias: { '~': __dirname }
+    alias: { '~': parent }
   },
   devServer: devServer(env),
   module: {
@@ -20,27 +26,22 @@ const config = env => ({
       test: /jsx?$/,
       exclude: /node_modules/,
       use: babel(env),
-    },
-    {
+    }, {
       test: /\.(jpeg|jpg|png|)$/,
       use: 'url-loader',
-    },
-    {
+    }, {
       test: /\.css$/,
       use: ['style-loader', 'css-loader']
-    },
-    {
+    }, {
       test: /\.(txt|md|markdown)$/,
       use: 'raw-loader',
     }]
   },
-  node: {
-    console: true,
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty'
-  },
   plugins: plugins(env),
+  externals: [
+    nodeExternals(),
+    {'firebase-functions': true},
+  ]
 })
 
 const entries = (env, entry) =>
@@ -50,7 +51,16 @@ const entries = (env, entry) =>
 
 const plugins = env => isHot(env) ? [
   new webpack.HotModuleReplacementPlugin,  // Enable HMR globally
-] : []
+] : [
+  new SWPrecacheWebpackPlugin({
+    cacheId: 'v1',
+    dontCacheBustUrlsMatching: /\.\w{8}\./,
+    filename: 'sw.js',
+    minify: true,
+    navigateFallback: 'https://eleniarvanitis.com/index.html',
+    staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/],
+  }),
+]
 
 function devServer(env) {
   if (isProd(env)) return
@@ -62,6 +72,5 @@ function devServer(env) {
     }
   }
 }
-
 
 module.exports = config(process.env)
