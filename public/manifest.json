@@ -6,7 +6,7 @@
       "sizes": "192x192",
       "type": "image/ico"
   }],
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "./index.html",
   "background_color": "rgba(0,0,0,0.9)",
   "theme_color": "#e0bf9f",
   "display": "standalone"

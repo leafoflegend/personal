@@ -2,7 +2,6 @@
 const webpack = require('webpack')
     , babel = require('./babel.config')
     , {isHot, isProd} = require('./env.config')
-    , SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 const config = env => ({
   entry: entries(env, './main.js'),
@@ -33,10 +32,6 @@ const config = env => ({
     {
       test: /\.(txt|md|markdown)$/,
       use: 'raw-loader',
-    },
-    {
-      test: /\.json$/,
-      use: 'json-loader'
     }]
   },
   node: {
@@ -55,17 +50,6 @@ const entries = (env, entry) =>
 
 const plugins = env => isHot(env) ? [
   new webpack.HotModuleReplacementPlugin,  // Enable HMR globally
-  new webpack.NamedModulesPlugin,          // Better module names in the browser
-                                           // console on HMR updates
-  new webpack.NoEmitOnErrorsPlugin,        // Don't emit on errors.
-  new SWPrecacheWebpackPlugin({
-      cacheId: 'v1',
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: 'sw.js',
-      minify: true,
-      navigateFallback: 'https://eleniarvanitis.com/index.html',
-      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
-  }),
 ] : []
 
 function devServer(env) {
