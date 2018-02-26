@@ -6,7 +6,7 @@ export default () => {
   window.scroll(0,0)
 
   return <div className='work'>
-    <a href='/assets/Eleni_Arvanitis_Resume.pdf' target='_blank'>
+    <a href='/assets/Eleni-Arvanitis-Resume.pdf' target='_blank'>
       <button className='resume-button'>View Resume</button>
     </a>
     <Expand/>
