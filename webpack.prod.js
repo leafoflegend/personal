@@ -1,7 +1,7 @@
 'use strict'
 const webpack = require('webpack')
     , nodeExternals = require('webpack-node-externals')
-    , CompressionPlugin = require('compression-webpack-plugin')
+    // , CompressionPlugin = require('compression-webpack-plugin')
     , SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 module.exports = {
