@@ -6,12 +6,14 @@
   "main": "main.js",
   "sideEffects": false,
   "scripts": {
-    "prepare": "firebase use --add",
+    "prepare": "firebase use eleni",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dev",
-    "build": "webpack -p --config webpack-config/webpack.config.js",
+    "start": "node config/dev",
+    "build": "webpack -p --config config/webpack.config.js",
     "watch": "npm run build -- -w",
-    "deploy": "npm run build && npx firebase deploy"
+    "build-prod": "webpack -p --config config/webpack.config.js",
+    "watch-prod": "npm run build-prod -- -w",
+    "deploy": "npm run build-prod && npx firebase deploy"
   },
   "author": "Eleni Arvanitis",
   "license": "ISC",

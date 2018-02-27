@@ -12,9 +12,10 @@ const config = env => ({
   output: {
     filename: 'bundle.js',
     path: `${parent}/public`,
+    libraryTarget: 'commonjs',
   },
+  target: 'web',
   context: parent,
-  target: 'node',
   devtool: 'inline-source-map',
   resolve: {
     extensions: [ '.jsx', '.js', '.json' ],
@@ -38,10 +39,10 @@ const config = env => ({
     }]
   },
   plugins: plugins(env),
-  externals: [
+  externals: isProd ? [
     nodeExternals(),
     {'firebase-functions': true},
-  ]
+  ] : []
 })
 
 const entries = (env, entry) =>
