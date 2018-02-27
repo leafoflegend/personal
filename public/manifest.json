@@ -1,13 +1,16 @@
 {
+  "dir": "rtl",
+  "lang": "en-US",
   "short_name": "Eleni A",
   "name": "Eleni Arvanitis - Engineer - Dreamer - Greek",
-  "icons": [{
-      "src":"favicon.ico",
-      "sizes": "192x192",
-      "type": "image/ico"
-  }],
-  "start_url": "./index.html",
-  "background_color": "rgba(0,0,0,0.9)",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000",
   "theme_color": "#e0bf9f",
-  "display": "standalone"
+  "description": "My personal website featuring my portfolio and  writing pieces.",
+  "icons": [{
+    "src": "favicon.ico",
+    "sizes": "192x192",
+    "type": "image/ico"
+  }]
 }
