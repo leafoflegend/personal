@@ -12,6 +12,7 @@ import Articles from '~/client/components/Articles'
 import Contact from '~/client/components/Contact'
 import Footer from '~/client/components/Footer'
 
+// Review: mixed single/double quotes
 export default () => <Router>
   <div>
     <Navbar/>

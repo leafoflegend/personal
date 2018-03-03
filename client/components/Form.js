@@ -5,6 +5,8 @@ import { siteKey, action } from '~/content/secrets'
 export default class Form extends Component {
   state = { name: '', email: '', message: '', 'g-recaptcha-response': '' }
 
+  // As long as you strip the console's during build
+  // I like this function though, well thought out
   handleChange = propertyName => evt => {
     console.log(`${propertyName}: ${this.state[propertyName]}`)
 
@@ -14,6 +16,7 @@ export default class Form extends Component {
     })
   }
 
+  // LMFAO
   verifyHumanity = req => {
     this.setState({ 'g-recaptcha-response': req })
   }

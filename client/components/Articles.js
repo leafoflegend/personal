@@ -9,7 +9,9 @@ export default class Articles extends Component {
   componentDidMount() {
     db.ref('articles')
       .once('value', snap => {
+        // --i > i--
         for (let i = snap.val().length - 1; i > -1; i--) {
+          // it would be kind of cool if you could chunk one article at a time, but seems unneccessary for mvp
           this.setState({ articles: [...this.state.articles, snap.val()[i]] })
         }
       })

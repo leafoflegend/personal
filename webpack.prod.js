@@ -1,3 +1,4 @@
+// Again with the use strict
 'use strict'
 const webpack = require('webpack')
     , nodeExternals = require('webpack-node-externals')
@@ -13,6 +14,7 @@ module.exports = {
   },
   target: 'node',
   module: {
+    // I find it odd you use babel-loader here, and babel.config.js over in the other build... maybe pick one and stick with it?
     rules: [{
       test: /jsx?$/,
       exclude: /node_modules/,
@@ -43,6 +45,7 @@ module.exports = {
     alias: { '~': __dirname },
   },
   plugins: [
+    // ohhh fancy
     new SWPrecacheWebpackPlugin({
       cacheId: 'v1',
       dontCacheBustUrlsMatching: /\.\w{8}\./,

@@ -3,6 +3,7 @@ import React from 'react';
 import { socialLinks } from "~/content/secrets"
 import '~/public/assets/styles/footer.css'
 
+// Maybe $copy; {`${(new Date()).getFullYear()} Eleni Arvanitis`} ? Who wants to update this
 export default () =>  <div className='footer' role='contentinfo'>
   <span className='copyright'>&copy; 2018 Eleni Arvanitis</span>
   <div>

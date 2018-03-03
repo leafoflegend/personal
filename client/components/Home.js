@@ -5,6 +5,7 @@ import TextLoop from 'react-text-loop'
 import '~/public/assets/styles/home.css'
 import { me, description} from '~/content/about'
 
+// Ew carousels
 export default () => <div className='me'>
   <div className='text-carousel'>
     I am

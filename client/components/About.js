@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+// Im a bit confused about the below import, but maybe im not seeing something in your build steps
 import { aboutHeader, aboutText1, aboutText2 } from '~/content/about'
 import '~/public/assets/styles/about.css'
 

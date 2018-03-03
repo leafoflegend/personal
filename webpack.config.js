@@ -1,3 +1,4 @@
+// why do we need use strict?
 'use strict'
 const webpack = require('webpack')
     , babel = require('./babel.config')
@@ -12,6 +13,7 @@ const config = env => ({
   devtool: 'inline-source-map',
   resolve: {
     extensions: [ '.jsx', '.js', '.json' ],
+    // Like the aliasing of home a lot.
     alias: { '~': __dirname }
   },
   devServer: devServer(env),

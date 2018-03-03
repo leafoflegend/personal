@@ -6,6 +6,7 @@ import '~/public/assets/styles/contact.css'
 import '~/public/assets/styles/arrows.css'
 
 export default () => {
+  // bold use of window
   window.scroll(0,0)
 
   return <div className='contact'>
